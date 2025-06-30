@@ -34,11 +34,19 @@ The goal is to uncover all safe cells without clicking on a mine. If a mine is c
 
 ## Setup & Installation
 
-Make sure you have Python 3.8+ and install required packages:
+Make sure you have Python 3.8+ installed.
+
+To install the required packages, run:
 
 ```bash
-pip install numpy torch matplotlib gym
+pip install -r requirements.txt
 ```
+
+> The file `requirements.txt` includes specific library versions to ensure reproducibility:
+> - numpy==1.24.3  
+> - torch==2.0.1  
+> - matplotlib==3.7.1  
+> - gym==0.26.2
 
 ---
 
