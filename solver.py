@@ -11,6 +11,7 @@ def get_safe_moves(board):
     safe_moves = set()
 
     def neighbors(i, j):
+        # Return all valid neighbors (excluding the cell itself)
         return [
             (ni, nj)
             for ni in range(max(0, i - 1), min(H, i + 2))
@@ -21,8 +22,9 @@ def get_safe_moves(board):
     for i in range(H):
         for j in range(W):
             val = board[i, j]
+
             if val == 0:
-                # all unknown neighbors of a zero‐cell are safe
+                # All unopened neighbors of a 0-cell are safe
                 for (ni, nj) in neighbors(i, j):
                     if board[ni, nj] == -2:
                         safe_moves.add((ni, nj))
@@ -31,7 +33,8 @@ def get_safe_moves(board):
                 neigh = neighbors(i, j)
                 unknown = [(ni, nj) for (ni, nj) in neigh if board[ni, nj] == -2]
                 flagged = [(ni, nj) for (ni, nj) in neigh if board[ni, nj] == -3]
-                # if we've already flagged exactly `val` mines, the rest are safe
+
+                # If all required mines are flagged, remaining unknowns are safe
                 if len(unknown) > 0 and len(flagged) == val:
                     safe_moves.update(unknown)
 
