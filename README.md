@@ -38,7 +38,7 @@ pip install numpy torch matplotlib gym
 
 There are two main training stages in this project:
 
-### 1. Supervised Pretraining (optional but recommended)
+### 1. Supervised Pretraining
 
 ```bash
 python solver_data_generator.py
