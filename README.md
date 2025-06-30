@@ -9,6 +9,14 @@ It includes a full environment, training pipeline, pretrained models, and visual
 
 ---
 
+## What is Minesweeper?
+
+Minesweeper is a logic-based puzzle game played on a hidden grid of cells. Some cells contain hidden mines, and the rest are safe.  
+The player uncovers cells and uses numerical clues (showing how many mines are adjacent) to deduce the locations of mines.  
+The goal is to uncover all safe cells without clicking on a mine. If a mine is clicked, the game ends immediately.
+
+---
+
 ## Project Components
 
 - `mc_agent.py` – Neural network and Monte Carlo-based agent logic.
